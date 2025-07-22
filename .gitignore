@@ -1,0 +1,16 @@
+# WebStorm / IntelliJ IDEA
+.idea/
+*.iml
+
+# VSCode settings
+.vscode/
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
