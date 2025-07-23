@@ -42,3 +42,5 @@ console.log(typeof arrNew);
 
 let arr3 = [1, 2, 3, 4, 5, 6];
 arr3.split();
+
+console.log(arr3)
