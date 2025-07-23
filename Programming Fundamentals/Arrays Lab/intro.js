@@ -1,48 +1,30 @@
-function test(input) {
-  // let count = input.length;
+function solve(arr) {
 
-  // let lastElement = input[count - 1];
+    let result = [];
+    let isTrue = true;
 
-  // console.log(lastElement);
 
-  // let numbers = [1, 2, 3];
-  // console.log(numbers);
+    for (let i = 0; i < arr.length; i++) {
+        let currentSequence = [];
 
-  // numbers.push(4, 5);
-  // console.log(numbers);
+        for (let j = i + 1; j < arr.length; j++) {
 
-  // let lastElement = numbers.unshift(0);
-  // console.log(lastElement);
+            if (arr[i] !== arr[j]) {
+                isTrue = false;
+                break;
+            } else {
+                currentSequence.push(arr[i], arr[j]);
+            }
+        }
 
-  // console.log(numbers);
+        if (currentSequence.length > result.length) {
+            result = currentSequence;
+        }
+    }
 
-  // let newArray = [1, 2, 3];
-  // newArray[4] = 5;
-  // newArray.push(1);
-
-  // console.log(newArray);
-
-  // let arrOfNumber = [10, 20, 30, 40, 50];
-  // let sum = 0;
-
-  // for (let index = 0; index < arrOfNumber.length; index++) {
-  //   let currentNumber = arrOfNumber[index];
-
-  //   sum += currentNumber;
-  // }
-
-  // console.log(sum);
-
-  // for (let currentNumber of arrOfNumber) {
-  //   sum += currentNumber;
-  // }
-
-  // console.log(sum);
-
-  let name = 'Pen4o';
-
-  let reversedName = name.split('').reverse();
-  console.log(reversedName);
+    console.log(result.join(' '));
 }
 
-test();
+
+
+solve([2, 1, 1, 2, 3, 3, 2, 2, 2, 1]);
