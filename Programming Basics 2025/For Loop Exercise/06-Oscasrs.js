@@ -1,7 +1,7 @@
 function oscars (input) {
 
  // TODO:
- // 1. Get known arugements
+ // 1. Get known arguments
  // 2. For loop
  //  2.1 Get current judge values
  //  2.2 Calculate judge points 

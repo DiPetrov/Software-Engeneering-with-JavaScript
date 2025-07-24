@@ -20,19 +20,13 @@ function backToThePast(a, b) {
   }
   if (heritage >= moneySpent) {
 
-    console.log(
-      `Yes! He will live a carefree life and will have ${(
-        heritage - moneySpent
-      ).toFixed(2)} dollars left.`
-    );
+    console.log(`Yes! He will live a carefree life and will have ${(heritage - moneySpent).toFixed(2)} dollars left.`);
 
   } else {
 
-    console.log(
-      `He will need ${(moneySpent - heritage).toFixed(2)} dollars to survive.`
-    );
+    console.log(`He will need ${(moneySpent - heritage).toFixed(2)} dollars to survive.`);
     
   }
 }
 backToThePast(50000, 1802);
-backToThePast(100000.15, 1808);
+// backToThePast(100000.15, 1808);

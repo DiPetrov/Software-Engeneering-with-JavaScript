@@ -12,7 +12,7 @@ function exercise(arg1) {
 
   for (let k = 1; k <= n - 2; k++) {
     p = p + '';
-  p = p + '*';
+    p = p + '*';
   }
 
   for (let j = 1; j <= n - 2; j++) {
