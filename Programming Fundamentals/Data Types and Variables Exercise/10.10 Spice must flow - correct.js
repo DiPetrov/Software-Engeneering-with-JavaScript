@@ -1,29 +1,18 @@
 function spiceMustFlow(input) {
-
-    let extract = true;
     let day = 0;
     let currentSpice = input;
     let totalSpice = 0;
 
-    while(extract) {
+    while (currentSpice >= 100) {
+        day++
         totalSpice += currentSpice;
+        totalSpice -= 26;
         currentSpice -= 10;
-        day++;
-
-        if (totalSpice >= 26) {
-            totalSpice -= 26;
-        } else {
-            break;
-        }
-
-        if (currentSpice < 100) {
-            break;
-        }
-
-
     }
 
-    totalSpice -= 26;
+    if (totalSpice >= 26) {
+        totalSpice -= 26;
+    }
 
     console.log(day);
     console.log(totalSpice);

@@ -3,55 +3,56 @@ function theatrePromotions(arg1, arg2) {
   let age = Number(arg2);
   let ticketPrice = 0;
 
-  if (
-    day === 'Monday' ||
-    day === 'Tuesday' ||
-    day === 'Wednesday' ||
-    day === 'Thursday' ||
-    day === 'Friday'
-  ) {
-    if (age >= 0 && age <= 18) {
-      ticketPrice = 12;
-      console.log(`${ticketPrice}$`);
-    } else if (age > 18 && age <= 64) {
-      ticketPrice = 18;
-      console.log(`${ticketPrice}$`);
-    } else if (age > 64 && age <= 122) {
-      ticketPrice = 12;
-      console.log(`${ticketPrice}$`);
-    } else {
-      console.log('Error!');
-    }
-  } else if (day === 'Sunday' || day === 'Saturday') {
-    if (age >= 0 && age <= 18) {
-      ticketPrice = 15;
-      console.log(`${ticketPrice}$`);
-    } else if (age > 18 && age <= 64) {
-      ticketPrice = 20;
-      console.log(`${ticketPrice}$`);
-    } else if (age > 64 && age <= 122) {
-      ticketPrice = 15;
-      console.log(`${ticketPrice}$`);
-    } else {
-      console.log('Error!');
-    }
-  } else if (day === 'Holiday') {
-    if (age >= 0 && age <= 18) {
-      ticketPrice = 5;
-      console.log(`${ticketPrice}$`);
-    } else if (age > 18 && age <= 64) {
-      ticketPrice = 12;
-      console.log(`${ticketPrice}$`);
-    } else if (age > 64 && age <= 122) {
-      ticketPrice = 10;
-      console.log(`${ticketPrice}$`);
-    } else {
-      console.log('Error!');
-    }
-  } else {
-   console.log("Error!");
-  }
+ if (age >=0 && age <= 18) {
+   switch (day) {
+     case 'Weekday':
+       ticketPrice = 12;
+       break;
+     case 'Weekend':
+       ticketPrice = 15;
+       break;
+     case 'Holiday':
+       ticketPrice = 5;
+       break;
+     default:
+       console.log(`Error!`)
+   }
+ } else if (age > 18 && age <= 64) {
+   switch (day) {
+     case 'Weekday':
+       ticketPrice = 18;
+       break;
+     case 'Weekend':
+       ticketPrice = 20;
+       break;
+     case 'Holiday':
+       ticketPrice = 12;
+       break;
+     default:
+       console.log(`Error!`)
+   }
+ } else if (age > 63 && age <= 122) {
+   switch (day) {
+     case 'Weekday':
+       ticketPrice = 12;
+       break;
+     case 'Weekend':
+       ticketPrice = 15;
+       break;
+     case 'Holiday':
+       ticketPrice = 10;
+       break;
+     default:
+       console.log(`Error!`)
+   }
+ } else {
+   console.log(`Error!`)
+   return;
+ }
+
+  console.log(`${ticketPrice}$`)
 }
-theatrePromotions('Wednesday', 42);
+
+theatrePromotions('Weekday', 42);
 theatrePromotions('Holiday', -12);
-theatrePromotions('Wednesday', 15);
+theatrePromotions('Holiday', 15);
