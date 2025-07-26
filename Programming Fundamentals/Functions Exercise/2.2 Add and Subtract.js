@@ -11,7 +11,6 @@ function addAndSubtract(a, b, c) {
     }
 
     let finalResult = subtract(sumResult, c);
-    console.log(finalResult);
     return finalResult;
 
 }
