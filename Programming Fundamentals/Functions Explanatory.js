@@ -4,8 +4,8 @@
 /* They are very useful in functional programming */
 
 // Example:
-let increment = x => x + 1;
-console.log(increment(5));
+// let increment = x => x + 1;
+// console.log(increment(5));
 
 // The one above is the same as:
 let increment = function(x) {
