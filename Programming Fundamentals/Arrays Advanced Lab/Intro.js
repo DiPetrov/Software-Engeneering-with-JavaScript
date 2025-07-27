@@ -27,26 +27,25 @@
 // console.log(number)
 // console.log(newNumber)
 
-function solve(arr) {
 
-    let firstKArr = [];
-    let lastKArr = [];
-    let kNumber = arr.shift();
+// let myNames = ['Borislav', 'Ivan', 'Ivaylo', 'Maria', 'Peter', 'Ana'];
+//
+// // let result = myNames.map(function(el) {
+// //     return el[0];
+//
+// let result2 = myNames.map(el => el + ' '); // The same like the previous one
+//
+// console.log(result2);
 
-    for (let i = 0; i < kNumber; i++) {
-        let currentElement = arr[i];
-        firstKArr.push(currentElement);
-    }
 
-    console.log(firstKArr.join(' '));
+// let myArr = ['one', 'two', 'three', 'four'];
+// let longWords = myArr.filter(x => x.length > 3);
+// console.log(longWords);
 
-    for (let i = 0; i < kNumber; i++) {
-        let currentElement = arr[arr.length - kNumber + i];
-        lastKArr.push(currentElement);
-    }
+let someNumbers = [10, 20, 30, 40, 50, 60 ,70];
 
-    console.log(lastKArr.join(' '));
-}
+let filteredNumbers = someNumbers
+    .filter((number, index) => index < 2);
 
-solve([2, 7, 8, 9]);
-solve([3, 6, 7, 8, 9]);
+console.log(filteredNumbers);
+

@@ -12,7 +12,6 @@ arr.push[4]; /* it will add the value 4 at the end of the array */
 console.log(arr);
 
 /* Check wether particular value is contained within an array */
-
 let isHere = arr.includes(1);
 let isHere = arr.includes(1, 3); // looks for the element 1 after the element 3!
 
@@ -31,20 +30,17 @@ let arr2 = arrNew.slice(); // Creates the new array
 let arr3 = arrNew.slice(2); // Creates new Array but after the second element
 let arr3 = arrNew.slice(2, 4); // Creates new Array starting after second element up to 4th (not included) element
 
-arrNew.pop()
 
+arrNew.pop()
 console.log(arrNew);
 console.log(arr2);
 
 /* This methods takes the array and prints it as a string. It is identical like the .join() methods BUT it always separates the values
 with a ',' comma. */
-
-
 arrNew.toString();
 console.log(typeof arrNew);
 
 /* */
-
 let arr3 = [1, 2, 3, 4, 5, 6];
 arr3.split();
 
@@ -58,6 +54,7 @@ numbers.unshift(-1);
 numbers.shift();
 
 /* Turns string elements into Number element within the array */
+// The map() methods creates a new array applying a function to every element of the array
 arr.map(Number)
 
 /* It searches for a particular element within the array and returns
@@ -70,3 +67,8 @@ let newArray10 = [5, 10, 59, 30, 40, 100];
 let newArrayNums = newArray10.splice(2, 3); // start, delete count
 let deleted = newArray10.splice(1,2, 'Borislav', 'Ivaylo');
 
+/* The .filter() method creates a new array from elements matching predicate - returning a boolean value. */
+/* It allows us to run functions on arrays with elements based on certain rules */
+let myArr = ['one', 'two', 'three', 'four'];
+let longWords = myArr.filter(x => x.length > 3);
+console.log(longWords);
