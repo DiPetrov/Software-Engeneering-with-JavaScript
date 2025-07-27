@@ -7,16 +7,32 @@ function factorialDivision(a, b) {
         return factor;
     }
 
-    // function division(x, y) {
-    //     let result = x / y;
-    //     return result;
-    // }
+    function division(x, y) {
+        return x / y;
+    }
     let temp_result1 = calculateFactorial(a);
     let temp_result2 = calculateFactorial(b);
-    let finalResult = temp_result1 / temp_result2;
+    let finalResult = division(temp_result1, temp_result2);
 
-    console.log(finalResult.toFixed(2));
-
+    console.log(finalResult);
 }
 
 factorialDivision(5, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
