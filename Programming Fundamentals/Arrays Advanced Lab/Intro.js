@@ -66,7 +66,7 @@
 // randomNames.sort((a, b) => a.length - b.length); // The same as above!
 // console.log(randomNames);
 
-let randomNames = ['borislav', 'Ivan', 'Ivaylo', 'maria', 'peter', 'Ana'];
-let someTextsSorted = randomNames.sort((a, b) => a.localeCompare(b));
-
-console.log(someTextsSorted);
+// let randomNames = ['borislav', 'Ivan', 'Ivaylo', 'maria', 'peter', 'Ana'];
+// let someTextsSorted = randomNames.sort((a, b) => a.localeCompare(b));
+//
+// console.log(someTextsSorted);
