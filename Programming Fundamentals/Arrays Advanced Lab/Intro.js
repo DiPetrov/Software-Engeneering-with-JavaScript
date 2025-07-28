@@ -42,10 +42,31 @@
 // let longWords = myArr.filter(x => x.length > 3);
 // console.log(longWords);
 
-let someNumbers = [10, 20, 30, 40, 50, 60 ,70];
+// let someNumbers = [10, 20, 30, 40, 50, 60 ,70];
+//
+// let filteredNumbers = someNumbers
+//     .filter((number, index) => index < 2);
+//
+// console.log(filteredNumbers);
 
-let filteredNumbers = someNumbers
-    .filter((number, index) => index < 2);
 
-console.log(filteredNumbers);
+// let randomNames = ['Borislav', 'Ivan', 'Ivaylo', 'Maria', 'Peter', 'Ana'];
 
+// randomNames.sort(function (first, second) {
+//
+//     if (first.length < second.length) {
+//         return -1;
+//     } else if (first.length > second.length) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// })
+//
+// randomNames.sort((a, b) => a.length - b.length); // The same as above!
+// console.log(randomNames);
+
+let randomNames = ['borislav', 'Ivan', 'Ivaylo', 'maria', 'peter', 'Ana'];
+let someTextsSorted = randomNames.sort((a, b) => a.localeCompare(b));
+
+console.log(someTextsSorted);

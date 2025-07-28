@@ -24,7 +24,7 @@ function radioCrystals(arr) {
     function crystalCut(x) {
         let cutCount = 0;
 
-        while()
+
     }
 }
 

@@ -72,3 +72,15 @@ let deleted = newArray10.splice(1,2, 'Borislav', 'Ivaylo');
 let myArr = ['one', 'two', 'three', 'four'];
 let longWords = myArr.filter(x => x.length > 3);
 console.log(longWords);
+
+/* The sort() method sort the array be default but its not very useful */
+/* Thats why we need 1 or even better 2 parameters and comparing logic*/
+let randomNumbers = [1, 101, 4, 567, 123, 10, 245, 900, 1001];
+randomNumbers.sort();
+console.log(randomNumbers)
+
+/*.localeCompare is a special method that... */
+let randomNames = ['Borislav', 'Ivan', 'Ivaylo', 'Maria', 'Peter', 'Ana'];
+let someTextsSorted = randomNames.sort((a, b) => a.localeCompare(b));
+
+console.log(someTextsSorted);
