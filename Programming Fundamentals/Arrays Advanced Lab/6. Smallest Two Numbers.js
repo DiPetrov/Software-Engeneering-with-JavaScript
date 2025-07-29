@@ -1,7 +1,7 @@
 function smallestTwoNumbers(arr) {
 
     // This algorithm muss be learned - sorting !
-    let sorted = arr.sort((a, b) => a -b);
+    let sorted = arr.sort((x, y) => x - y);
 
     let firstTwo = sorted.slice(0, 2);
 
