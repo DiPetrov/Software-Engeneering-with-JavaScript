@@ -7,6 +7,8 @@ function listOfProducts(products) {
     for (let product of result) {
         console.log(product);
     }
+
 }
+
 
 listOfProducts(['Potatoes', 'Tomatoes', 'Onions', 'Apples']);
