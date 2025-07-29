@@ -40,7 +40,9 @@ with a ',' comma. */
 arrNew.toString();
 console.log(typeof arrNew);
 
-/* */
+/* The split() method of String values takes a pattern and divides this
+string into an ordered list of substrings by searching for the pattern,
+puts these substrings into an array, and returns the array.*/
 let arr3 = [1, 2, 3, 4, 5, 6];
 arr3.split();
 
