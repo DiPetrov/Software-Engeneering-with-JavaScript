@@ -7,7 +7,7 @@ function arrayRotation(arr, rotations) {
     }
   }
 
-  for (k = 1; k <= rotations; k++) {
+  for (let k = 1; k <= rotations; k++) {
     arr.shift();
   }
 
