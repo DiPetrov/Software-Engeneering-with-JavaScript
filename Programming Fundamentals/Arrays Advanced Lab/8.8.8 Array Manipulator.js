@@ -1,3 +1,5 @@
+function arrayManipulator(arr) {
+
 let manipulatedArr = arr
     .shift()
     .split(' ')
@@ -33,13 +35,13 @@ for (let i = 0; i < arr.length; i++) {
 console.log(manipulatedArr.join(' '));
 }
 
-smallestTwoNumbers(['4 19 2 53 6 43',
+arrayManipulator(['4 19 2 53 6 43',
     'Add 3',
     'Remove 2',
     'RemoveAt 1',
     'Insert 8 3']);
 
-smallestTwoNumbers(['6 12 2 65 6 42',
+arrayManipulator(['6 12 2 65 6 42',
     'Add 8',
     'Remove 12',
     'RemoveAt 3',
