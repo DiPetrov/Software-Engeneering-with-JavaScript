@@ -6,6 +6,7 @@ function personInfo(firstName, lastName, age) {
     person.age = age;
 
     return person;
+
 }
 
 personInfo("Peter", "Pan", "20");
