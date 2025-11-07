@@ -1,7 +1,8 @@
-function substring(str, start, end) {
+function solve(text, startIndex, count) {
 
-    str = str.substring(start, start - end);
-    console.log(str);
+
+    console.log(text.substring(startIndex, startIndex +  count));
+
 }
 
-substring('ASentence', 1, 8);
+solve('ASentence', 1, 8);

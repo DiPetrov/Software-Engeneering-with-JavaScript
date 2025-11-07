@@ -1,5 +1,5 @@
 function reverseInPlace(arr) {
-  for (i = 0; i < arr.length / 2; i++) {
+  for (let i = 0; i < arr.length / 2; i++) {
     let reversedIndex = arr.length - 1 - i;
     let value = arr[i];
     let secondValue = arr[reversedIndex];

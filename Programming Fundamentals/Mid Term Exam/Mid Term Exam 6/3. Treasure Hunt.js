@@ -113,29 +113,17 @@ function treasureHunt(input) {
         let parts = command.split(' ');
         let currentCommand = parts[0];
         let firstItem = parts[1];
-        // let secondItem;
-
-        // if (parts[2] !== undefined) {
-        //     secondItem = parts[2];
-        // }
-
-        // let thirdItem;
-
-        // if (parts[3] !== undefined) {
-        //     thirdItem = parts[3];
-        // }
 
         switch(currentCommand) {
             case 'Loot':
                 for (let i = 1; i < parts.length; i++) {
                 let item = parts[i];
-                if (item !== undefined && !initialChestLoot.includes(item)) {
-                    initialChestLoot.unshift(item);
-                }
+                    if (item !== undefined && !initialChestLoot.includes(item)) {
+                        initialChestLoot.unshift(item);
+                    }
                 }
                 break;
             case 'Drop':
-                /* ② move the element without duplicating */
                 if (firstItem >= 0 && firstItem < initialChestLoot.length) {
                     initialChestLoot.push(initialChestLoot.splice(firstItem, 1)[0]);
                 }
@@ -144,6 +132,7 @@ function treasureHunt(input) {
                 if (firstItem > initialChestLoot.length) {
                     firstItem = initialChestLoot.length;
                     }
+
                let stolenItems = initialChestLoot.slice(-firstItem);
                initialChestLoot.splice(-firstItem, firstItem);
                console.log(stolenItems.join(', '));
@@ -163,7 +152,6 @@ function treasureHunt(input) {
         for (let item of initialChestLoot) {
             sumLength += item.length;
         }
-
         console.log(`Average treasure gain: ${(sumLength / initialChestLoot.length).toFixed(2)} pirate credits.`);
     }
 }

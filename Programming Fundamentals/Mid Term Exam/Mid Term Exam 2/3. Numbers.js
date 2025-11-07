@@ -2,6 +2,7 @@ function numbers(input) {
 
     let numbers = input.split(' ').map(Number);
     let sumAverageNumbers = 0;
+
     for (let number of numbers) {
         sumAverageNumbers += number;
     }
@@ -10,7 +11,6 @@ function numbers(input) {
     averageNumber = Number(averageNumber);
 
     let higherThanAverage = [];
-
 
     for (let number of numbers) {
         if (number > averageNumber) {
@@ -24,7 +24,7 @@ function numbers(input) {
     }
 
     higherThanAverage.sort((a, b) => b - a);
-    higherThanAverage.splice(5, higherThanAverage.length)
+    higherThanAverage.splice(5, higherThanAverage.length);
     console.log(higherThanAverage.join(' '));
 }
 

@@ -1,6 +1,10 @@
-let x = 100;
-y = x < 100 ? true : false;
+// let x = 100;
+// y = x < 100 ? true : false;
+//
+// console.log(y)
 
-
-
-console.log(y)
+if ("") {
+    console.log("true");
+} else {
+    console.log("false")
+}

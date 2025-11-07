@@ -37,11 +37,15 @@ let num2 = -13;
 let newNumber = Math.abs(num2);
 console.log(newNumber);
 
-/* Принтира ASCI кода на буквата 'а'*/
-let char1 = 'a';
-let asciCode1 = char1.charCodeAt();
-console.log(asciCode1);
+/* Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments: */
+Math.min(0, 150, 30, 20, -8, -200); // returns -200
+Math.max(0, 150, 30, 20, -8, -200); // returns 150
 
-/* */
-let newVariable = 'Total';
-newVarialbe.replace();
+/* Math.random() returns a random float between 0 and 1 */
+Math.random() // Returns randomized float number
+
+/* Math.log(x) returns the natural logarithm of x. */
+Math.log(x)
+
+/* Math.log2(x) returns the base 2 logarithm of x. */
+Math.log2(x)

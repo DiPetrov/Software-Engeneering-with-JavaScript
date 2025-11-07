@@ -9,7 +9,6 @@ function counterStrike(input) {
     while(command !== 'End of battle') {
         let currentDistance = Number(command);
 
-
         if (startEnergy >= currentDistance) {
             startEnergy -= currentDistance;
             battlesWon++;

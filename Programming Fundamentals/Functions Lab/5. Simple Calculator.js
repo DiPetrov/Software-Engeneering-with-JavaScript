@@ -1,6 +1,7 @@
 function simpleCalculator(first, second, operator) {
   let operation;
 
+
   if (operator === 'multiply') {
     operation = (x, y) => x * y;
   } else if (operator === 'divide') {
@@ -10,7 +11,6 @@ function simpleCalculator(first, second, operator) {
   } else if (operator === 'subtract') {
     operation = (x, y) => x - y;
   }
-
   return operation(first, second);
 }
 

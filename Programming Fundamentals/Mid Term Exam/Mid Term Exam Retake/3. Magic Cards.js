@@ -8,6 +8,7 @@ let command = input[index];
 
 while(command !== "Ready" ) {
     let [currentCommand, valueOne, valueTwo] = command.split(' ');
+
     if (command.includes('Shuffle')) {
         currentCommand = 'Shuffle deck'
     }
@@ -59,6 +60,12 @@ while(command !== "Ready" ) {
             break;
         case 'Shuffle deck':
             newDeckArr.reverse();
+            // for (let i = 0; i < newDeckArr.length / 2 - 1; i++) {
+            //     let reverseIndex = newDeckArr.length - 1 - i;
+            //     let tempValue = newDeckArr[i];
+            //     newDeckArr[i] = newDeckArr[reverseIndex];
+            //     newDeckArr[reverseIndex] = tempValue;
+            // }
             break;
         default:
             console.log(`Invalid Command!`)

@@ -1,9 +1,8 @@
 function evenOddSubtraction(arr) {
   let evenSum = 0;
   let oddSum = 0;
-  
 
-  for (currentNumber of arr) {
+  for (let currentNumber of arr) {
     if (currentNumber % 2 === 0) {
       evenSum += currentNumber;
     } else {

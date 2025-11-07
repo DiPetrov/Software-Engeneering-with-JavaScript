@@ -2,7 +2,7 @@ function equalArray(arr1, arr2) {
   let isIdentical = true;
   let sum = 0;
 
-  for (i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     let currentNumber = Number(arr1[i]);
     let currentNumber2 = Number(arr2[i]);
 

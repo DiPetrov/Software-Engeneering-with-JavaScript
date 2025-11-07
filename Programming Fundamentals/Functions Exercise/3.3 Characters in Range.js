@@ -12,7 +12,6 @@ function charactersInRange(a, b) {
         } else {
             for (let i = char1 + 1; i < char2; i++) {
                 result += String.fromCharCode(i) + " ";
-
             }
         }
     }

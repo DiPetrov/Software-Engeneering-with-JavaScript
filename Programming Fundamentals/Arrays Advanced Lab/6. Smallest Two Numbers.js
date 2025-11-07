@@ -1,13 +1,16 @@
 function smallestTwoNumbers(arr) {
 
-    // This algorithm muss be learned - sorting !
-    let sorted = arr.sort((x, y) => x - y);
+    let newArr = arr.sort(function solve(first, second) {
+        if (first < second) {
+            return -1;
+        } else if (first > second) {
+            return 1;
+        } else {
+            return 0;
+        }
+    })
 
-    let firstTwo = sorted.slice(0, 2);
-
-    console.log(firstTwo.join(' '));
-
+    console.log(newArr.slice(0, 2).join(' '));
 }
-
 smallestTwoNumbers([30, 15, 50, 5]);
-smallestTwoNumbers([3, 0, 10, 4, 7, 3]);
+

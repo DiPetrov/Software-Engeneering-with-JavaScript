@@ -4,6 +4,7 @@ function solve(numbers) {
     return;
   }
   let result = [];
+
   while (true) {
     for (let i = 0; i < numbers.length - 1; i++) {
       let firstValue = numbers[i];

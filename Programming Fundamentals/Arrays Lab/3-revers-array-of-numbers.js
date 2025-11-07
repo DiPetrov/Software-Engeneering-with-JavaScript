@@ -9,7 +9,7 @@ function solve(number, arr) {
 
   let reversedArr = [];
 
-  for (i = 0; i < newArr.length; i++) {
+  for (let i = 0; i < newArr.length; i++) {
     let currentValue = newArr[i];
 
     reversedArr[newArr.length - 1 - i] = currentValue;
