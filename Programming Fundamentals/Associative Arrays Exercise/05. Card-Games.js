@@ -1,35 +1,48 @@
-function solve(arr) {
-    let playersCards = {};
-    let powerValues = {};
-    let typesValues = {};
+function solve(input) {
 
-    for (let playerDeck of arr) {
-        let [playerName, cardsStr] = playerDeck.split(': ');
-        let cards = cardsStr.split(', ');
+    let players = new Map();
 
-        if (playerName in playersCards) {
-        playersCards[playerName].push(...cards);
+    for (let line of input) {
+        let [name, cardList] = line.split(': ');
+        let cards = cardList.split(', ');
+
+        if (!players.has(name)) {
+            players.set(name, new Set());
+        }
+        let playerCards = players.get(name);
+
+        for (let card of cards) {
+            playerCards.add(card);
         }
     }
 
-    let entries = Object.entries(playerCards);
-
-    for (let [name, deck] of entries) {
-        let uniqueDeck = new Set(deck);
-        let deckValue = 0;
-
-        for (let card of uniqueDeck) {
-            let power = card.slice(0, card.length - 1);
-            let type = card[card.length - 1];
-
-            let cardValue = powerValues[power] * typesValues[type]
-            deckValue += cardValue;
-        }
-        console.log(name);
-        console.log(deck)
+    const powerMap = {
+        'J' : 11,
+        'Q' : 12,
+        'K' : 13,
+        'A' : 14
     }
 
-    console.log(`${name}: ${deckValue}`);
+    const typeMap = {
+        'S' : 4,
+        'H' : 3,
+        'D' : 2,
+        'C' : 1
+    }
+
+    for (let [name, cardSet] of players) {
+        let totalValue = 0;
+
+        for (let card of cardSet) {
+            let power = card.slice(0, -1);
+            let type = card.slice(-1);
+
+            power = powerMap[power] || Number(power); // Very interesting I have to learn it!
+            let typeValue = typeMap[type];
+            totalValue += power * typeValue;
+        }
+        console.log(`${name}: ${totalValue}`);
+    }
 }
 
 solve([

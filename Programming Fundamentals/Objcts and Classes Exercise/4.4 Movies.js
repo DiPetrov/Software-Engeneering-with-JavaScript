@@ -1,19 +1,32 @@
 function movies(input) {
 
+    let result = [];
 
+    for (let i = 0; i < input.length; i++) {
+        let currentElement = input[i];
+        let movieObj = {};
+        if (currentElement.startsWith('addMovie')) {
+            let currentMovie = currentElement.slice(9,);
+            movieObj.name = currentMovie;
+            result.push(movieObj);
+        } else if (currentElement.includes('directedBy')) {
+            let [name, director] = currentElement.split(' directedBy ');
+            let movie = result.find(m => m.name === name);
+            if (movie) {
+                movie.director = director;
+            }
+        } else if (currentElement.includes('onDate')) {
+            let [name, date] = currentElement.split(' onDate ');
+            let movie = result.find(m => m.name === name);
+            if (movie) {
+                movie.date = date;
+            }
+        }
+    }
 
-    class movies {
-        constructor(name, director, date) {
-            name = name,
-                director = director,
-                date = date
-        };
-    };
-
-    for (let element of input) {
-        if (element.includes('addMovie')) {
-        input.shift();
-
+    for (let movie of result) {
+        if (movie.name && movie.director && movie.date) {
+            console.log(JSON.stringify(movie));
         }
     }
 }

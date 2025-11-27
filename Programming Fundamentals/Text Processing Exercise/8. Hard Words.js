@@ -1,23 +1,16 @@
 function solve(input) {
 
-    let text = input[0].split(' ');
-    let words = input[1];
+    let letter = input[0];
+    let wordsToFill = input[1];
 
-    for (let i = 0; i < text.length; i++) {
+    let letterWords = letter.split(/[.,!?:]? /);
+    let templates = letterWords.filter(word => word.includes('_'));
 
-        if (text[i].startsWith('_')) {
-
-            for (let j = 0; j < words.length; j++) {
-
-                if (words[j].length === text[i].length) {
-                    text[i] = words[j];
-                    break;
-                }
-            }
-        }
+    for (let template of templates) {
+        let rightWord = wordsToFill.find(word => word.length === template.length);
+        letter = letter.replace(template, rightWord);
     }
-
-    console.log(text.join(' '))
+    console.log(letter);
 }
 
 solve(['Hi, grandma! I\'m so ____ to write to you. ______ the winter vacation, so' +

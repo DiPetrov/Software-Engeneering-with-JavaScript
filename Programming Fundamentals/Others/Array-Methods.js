@@ -175,3 +175,4 @@ let maxValue = Math.max(...numbers);
 let a, b, rest;
 const arr1 = [1,2,3,4,5,6,7,8];
 [a, b, ...rest] = arr1;
+
